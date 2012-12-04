@@ -1,0 +1,40 @@
+# Metadata:
+## Type:
+Presentation
+## Title:
+Turnkey Reproducibility
+## Author:
+Geoffrey Oxberry
+## Venue:
+"Reproducibility in Computational and Experimental Mathematics" workshop, 
+December 10-14, 2012, @ Institute for Computational and Experimental Research
+in Mathematics (ICERM), Brown University, Providence, RI
+## Date of presentation:
+December 13, 2012
+## Description:
+This "lightning talk" (~5 min) briefly presents a flexible approach to
+"turnkey reproducibility" -- that is, how to make research reproducible to
+the point where very little effort is needed to reproduce any results. The
+key approach in this talk is to separate source code/results/data from
+the computational environment, adopting C. Titus Brown's philosophy of
+"mixability". Source code/results/data, referred to hereafter and in the
+presentation as "source code" are stored in a Git repo; a specification of
+the computational environment using Vagrant and a configuration management
+tool like Puppet, Chef, or a shell script is stored using another Git repo.
+Using Vagrant, VirtualBox, and a configuration management tool, the
+computational environment can be dynamically and reproducibly created or
+destroyed, AND the Git repo can be pulled in during the configuration
+process. Any README used to describe how to reproduce computational results
+merely needs to specify how to launch the Vagrant box, how to log into it,
+and how to run case studies (presumably scripted).
+
+Text configuration files obviate the need for storing large virtual machine
+images in a repo, and unambiguously specify the configuration needed for
+those interested in installing software on their own machines. Separating
+computational environment and source code gives users the option of using
+the computational environment offered or using their own computational
+environment. The approach enables users to create local computational
+sandboxes, which is briefly contrasted with a cloud computing approach
+offered by RunMyCode. For computationally intensive runs, this approach can
+be modified to configure and spawn instances of Amazon Web Service (or other
+cloud service) jobs.
