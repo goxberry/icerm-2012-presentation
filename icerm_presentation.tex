@@ -1,0 +1,68 @@
+\documentclass [14pt]{beamer}
+
+\usepackage{relsize}
+\usepackage[absolute,overlay]{textpos} 
+\usepackage[colorgrid,texcoord]{eso-pic} 
+\usepackage{tikz}
+
+\tikzset{
+  every overlay node/.style={
+    draw=black,fill=white,rounded corners,anchor=north west,
+  },
+}
+% Usage:
+% \tikzoverlay at (-1cm,-5cm) {content};
+% or
+% \tikzoverlay[text width=5cm] at (-1cm,-5cm) {content};
+\def\tikzoverlay{%
+   \tikz[baseline,overlay]\node[every overlay node]
+}%
+
+%\DeclareMathOperator{\diag}{diag}
+
+\mode<presentation>
+{
+%	\usetheme{Boadilla}
+%	\usecolortheme{beaver}
+  \usetheme{default}
+}
+
+%\setbeamertemplate{background}[grid][step=5mm]
+\setlength{\TPHorizModule}{5mm}
+\setlength{\TPVertModule}{5mm}
+
+\title[Turnkey reproducibility]
+{Turnkey reproducibility}
+
+\author[G. Oxberry]
+{\textbf{Geoffrey M. Oxberry}}
+
+\institute[LLNL]
+{
+ Lawrence Livermore National Laboratory \\
+Computational Engineering Division \\
+Energy Conversion and Storage
+}
+
+\date[ICERM 2012]
+{December 13, 2012}
+
+\begin{document}
+
+\setbeamertemplate[grid]{background}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Acknowledgments}
+%\begin{itemize}
+
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\end{document}
