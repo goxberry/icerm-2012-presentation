@@ -94,8 +94,9 @@ Energy Conversion and Storage
 \item Configuration stored in small text files
 \item Reduces storage needed to specify VM
 \item Can pull in source from Git as part of configuration
-\item Easy to spawn/destroy (one command)
+\item Easy to spawn/destroy (one command) locally
 \item Only depends on reputable open source software
+\item No language limits; can adapt to cloud, clusters
 \end{itemize}
 \end{frame}
 
@@ -113,6 +114,23 @@ Energy Conversion and Storage
 
 \begin{frame}
 \frametitle{Vagrant spawns the VMs}
+\begin{itemize}
+\item http://www.vagrantup.com/
+\item Download minimal machine image
+\begin{itemize}
+\item List of images on external sites: http://www.vagrantbox.es/
+\item Create an image with VeeWee:
+  http://www.github.com/jedi4ever/veewee
+\item Create an image using instructions in Vagrant docs
+\end{itemize}
+\item Configure VM via text files, using:
+\begin{itemize}
+\item Puppet
+\item Chef
+\item Shell script  
+\end{itemize}
+\item Vagrantfile (like Makefile) specifies machine image, location of config files
+\end{itemize}
 \end{frame}
 
 \begin{frame}
