@@ -134,12 +134,33 @@ Energy Conversion and Storage
 \end{frame}
 
 \begin{frame}
-\frametitle{Puppet (or Chef, shell script)\\
+\frametitle{Puppet (Chef, shell script)\\
 configures VMs}
+\begin{itemize}
+\item Puppet: http://www.puppetlabs.com/
+\item Chef: http://wiki.opscode.com/display/chef/home
+\item Text file specifying configuration
+\begin{itemize}
+\item Either shell script or domain specific language (DSL)
+\item DSL-based files easy to read
+\item Small, can version in Git
+\item Can pull in software using Git, RubyGems, Pip, etc.
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{VirtualBox runs VMs}
+\begin{itemize}
+\item http://www.virtualbox.org/
+\item Supported by Oracle
+\item Cross-platform: Linux, Windows, OS X
+\item For large parallel jobs, replace with:
+\begin{itemize}
+\item Amazon Web Services' CloudFormation
+\item StarCluster
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
