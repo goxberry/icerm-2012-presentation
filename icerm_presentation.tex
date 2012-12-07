@@ -3,22 +3,12 @@
 \usepackage{relsize}
 \usepackage[absolute,overlay]{textpos} 
 \usepackage[colorgrid,texcoord]{eso-pic} 
-\usepackage{tikz}
+\usepackage{hyperref}
 
-\tikzset{
-  every overlay node/.style={
-    draw=black,fill=white,rounded corners,anchor=north west,
-  },
-}
-% Usage:
-% \tikzoverlay at (-1cm,-5cm) {content};
-% or
-% \tikzoverlay[text width=5cm] at (-1cm,-5cm) {content};
-\def\tikzoverlay{%
-   \tikz[baseline,overlay]\node[every overlay node]
-}%
-
-%\DeclareMathOperator{\diag}{diag}
+% Taken from
+% http://tex.stackexchange.com/questions/13423/how-to-color-href-links-in-beamer
+\definecolor{links}{HTML}{660099}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
 
 \mode<presentation>
 {
@@ -115,12 +105,12 @@ Energy Conversion and Storage
 \begin{frame}
 \frametitle{Vagrant spawns the VMs}
 \begin{itemize}
-\item http://www.vagrantup.com/
+\item \url{http://www.vagrantup.com/}
 \item Download minimal machine image
 \begin{itemize}
-\item List of images on external sites: http://www.vagrantbox.es/
+\item List of images on external sites: \url{http://www.vagrantbox.es/}
 \item Create an image with VeeWee:
-  http://www.github.com/jedi4ever/veewee
+  \url{http://www.github.com/jedi4ever/veewee}
 \item Create an image using instructions in Vagrant docs
 \end{itemize}
 \item Configure VM via text files, using:
@@ -137,8 +127,8 @@ Energy Conversion and Storage
 \frametitle{Puppet (Chef, shell script)\\
 configures VMs}
 \begin{itemize}
-\item Puppet: http://www.puppetlabs.com/
-\item Chef: http://wiki.opscode.com/display/chef/home
+\item Puppet: \url{http://www.puppetlabs.com/}
+\item Chef: \url{http://wiki.opscode.com/display/chef/home}
 \item Text file specifying configuration
 \begin{itemize}
 \item Either shell script or domain specific language (DSL)
@@ -152,10 +142,10 @@ configures VMs}
 \begin{frame}
 \frametitle{VirtualBox runs VMs}
 \begin{itemize}
-\item http://www.virtualbox.org/
+\item \url{http://www.virtualbox.org/}
 \item Supported by Oracle
 \item Cross-platform: Linux, Windows, OS X
-\item For large parallel jobs, replace with:
+\item For large parallel jobs, replace Vagrant \& VirtualBox with:
 \begin{itemize}
 \item Amazon Web Services' CloudFormation
 \item StarCluster
