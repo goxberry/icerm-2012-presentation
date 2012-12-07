@@ -80,96 +80,99 @@ Energy Conversion and Storage}}
 \end{itemize}
 \end{frame}
 
+% ICERM wants a three-slide version; I'll give them three slides,
+% NOT counting the title and acknowledgments slides.
+
 % Propose solution
-\begin{frame}
-\frametitle{Dynamically spawning VMs\\ provides most flexibility}
-\begin{itemize}
-\item Configuration stored in small text files
-\item Reduces storage needed to specify VM
-\item Can pull in source from Git as part of configuration
-\item Easy to spawn/destroy (one command) locally
-\item Only depends on reputable open source software
-\item No language limits; can adapt to cloud, clusters
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Dynamically spawning VMs\\ provides most flexibility}
+%\begin{itemize}
+%\item Configuration stored in small text files
+%\item Reduces storage needed to specify VM
+%\item Can pull in source from Git as part of configuration
+%\item Easy to spawn/destroy (one command) locally
+%\item Only depends on reputable open source software
+%\item No language limits; can adapt to cloud, clusters
+%\end{itemize}
+%\end{frame}
 
 % Establish details
-\begin{frame}
-\frametitle{Requires four open-source packages}
-\begin{itemize}
-\item (\textbf{Note:} Replace with graphics after this draft.)
-\item Vagrant
-\item Puppet (or Chef, or shell scripts)
-\item VirtualBox
-\item Git
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Requires four open-source packages}
+%\begin{itemize}
+%\item (\textbf{Note:} Replace with graphics after this draft.)
+%\item Vagrant
+%\item Puppet (or Chef, or shell scripts)
+%\item VirtualBox
+%\item Git
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}
-\frametitle{Vagrant spawns the VMs}
-\begin{itemize}
-\item \url{http://www.vagrantup.com/}
-\item Download minimal machine image from:
-\begin{itemize}
-\item List of images on external sites: \url{http://www.vagrantbox.es/}
-\item Image created with VeeWee:
-  \url{http://www.github.com/jedi4ever/veewee}
-\item Image created using instructions in Vagrant docs
-\end{itemize}
-\item Configure VM via text files, using:
-\begin{itemize}
-\item Puppet
-\item Chef
-\item Shell script  
-\end{itemize}
-\item Vagrantfile (like Makefile) specifies machine image, location of config files
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Vagrant spawns the VMs}
+%\begin{itemize}
+%\item \url{http://www.vagrantup.com/}
+%\item Download minimal machine image from:
+%\begin{itemize}
+%\item List of images on external sites: \url{http://www.vagrantbox.es/}
+%\item Image created with VeeWee:
+%  \url{http://www.github.com/jedi4ever/veewee}
+%\item Image created using instructions in Vagrant docs
+%\end{itemize}
+%\item Configure VM via text files, using:
+%\begin{itemize}
+%\item Puppet
+%\item Chef
+%\item Shell script  
+%\end{itemize}
+%\item Vagrantfile (like Makefile) specifies machine image, location of config files
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}
-\frametitle{Puppet (Chef, shell script)\\
-configures VMs}
-\begin{itemize}
-\item Puppet: \url{http://www.puppetlabs.com/}
-\item Chef: \url{http://wiki.opscode.com/display/chef/home}
-\item Text file specifying configuration
-\begin{itemize}
-\item Either shell script or domain specific language (DSL)
-\item DSL-based files easy to read
-\item Small, can version in Git
-\item Can pull in software using package managers, Git, RubyGems, Pip, etc.
-\end{itemize}
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Puppet (Chef, shell script)\\
+%configures VMs}
+%\begin{itemize}
+%\item Puppet: \url{http://www.puppetlabs.com/}
+%\item Chef: \url{http://wiki.opscode.com/display/chef/home}
+%\item Text file specifying configuration
+%\begin{itemize}
+%\item Either shell script or domain specific language (DSL)
+%\item DSL-based files easy to read
+%\item Small, can version in Git
+%\item Can pull in software using package managers, Git, RubyGems, Pip, etc.
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}
-\frametitle{VirtualBox runs VMs}
-\begin{itemize}
-\item \url{http://www.virtualbox.org/}
-\item Supported by Oracle
-\item Cross-platform: Linux, Windows, OS X
-\item Hosts VM locally (like VMware)
-\item Can replace Vagrant \& VirtualBox with:
-\begin{itemize}
-\item Amazon Web Services' CloudFormation (parallel jobs)
-\item StarCluster (parallel jobs)
-\end{itemize}
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{VirtualBox runs VMs}
+%\begin{itemize}
+%\item \url{http://www.virtualbox.org/}
+%\item Supported by Oracle
+%\item Cross-platform: Linux, Windows, OS X
+%\item Hosts VM locally (like VMware)
+%\item Can replace Vagrant \& VirtualBox with:
+%\begin{itemize}
+%\item Amazon Web Services' CloudFormation (parallel jobs)
+%\item StarCluster (parallel jobs)
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}
-\frametitle{Example: Update matrix exponential in SciPy}
-\begin{itemize}
-\item Source Git repo: \textbf{(add GitHub URL here)}
-\item Environment Git repo: \textbf{(add GitHub URL here)}
-\begin{itemize}
-\item Vagrantfile to specify box to spawn
-\item Configuration in Puppet
-\item README with rections for running software
-\end{itemize}
-\item Run unit tests for reproducibility
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Example: Update matrix exponential in SciPy}
+%\begin{itemize}
+%\item Source Git repo: \textbf{(add GitHub URL here)}
+%\item Environment Git repo: \textbf{(add GitHub URL here)}
+%\begin{itemize}
+%\item Vagrantfile to specify box to spawn
+%\item Configuration in Puppet
+%\item README with rections for running software
+%\end{itemize}
+%\item Run unit tests for reproducibility
+%\end{itemize}
+%\end{frame}
 
 % Acknowledgments slide
 \begin{frame}
