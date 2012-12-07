@@ -12,6 +12,8 @@ OUTPUT_FILES= $(subst $(COMMA),$(TALK),$(OUT))
 
 all:
 	latex $(TALK).tex
+	# Compile second time so that slide counters in footer are correct.
+	latex $(TALK).tex
 	dvipdf $(TALK).dvi
 
 # Remove all of the output files
