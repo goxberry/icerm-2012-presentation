@@ -23,7 +23,7 @@
 \setlength{\TPVertModule}{5mm}
 
 \title[Turnkey reproducibility]
-{Turnkey reproducibility}
+{Towards turnkey reproducibility}
 
 \subtitle[G. Oxberry]
 {\textbf{Geoffrey M. Oxberry}}
@@ -56,28 +56,14 @@ Energy Conversion and Storage}}
 \item Takes time, expertise, patience, privileges
 \item Could affect system stability
 \end{itemize}
-\item Could wrap source in a VM (virtual machine)
+\item Could wrap source in VM (virtual machine) image
 \begin{itemize}
 \item Usually requires $\geq 300$ MB to host; big, unwieldy
-\item No separation of source code \& environment
+\item No separation of source code \& environment means no flexibility
 \end{itemize}
 \item High barrier means \textbf{people don't run the code}
-\end{itemize}
-\end{frame}
-
-% Establish scope of problem
-\begin{frame}
-\frametitle{Need to lower barrier to reproducibility}
-\begin{itemize}
-\item Separate source code and environment
-\item Source code: store in Git repo
-\item Environment options:
-\begin{itemize}
-\item Supply separate VM (big binary file to host)
-\item Use external service (like RunMyCode)
-\item Dynamically spawn VM from configuration files
-\end{itemize}
-\item Specifying environment in text files yields maximum flexibility!
+\item \textbf{Lower hosting \& time barrier} by specifying environment in
+  separate repo using configuration management software
 \end{itemize}
 \end{frame}
 
@@ -102,10 +88,43 @@ Energy Conversion and Storage}}
 \item StarCluster (\url{star.mit.edu/cluster})
 \item CloudFormation (\url{aws.amazon.com/cloudformation})
 \item Any other virtualization software
+\item Web services? (Maybe RunMyCode?)
 \end{itemize}
-\item Can also instantiate config on local machine, if desired
+\item Can instantiate config in host OS, if desired
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Example: Add matrix 1-norm estimation to SciPy}
+\begin{itemize}
+\item Needed for Higham's 2009, 2010 matrix exponential algorithms
+\item Presentation repo: \textbf{(add URL here)}
+\item Source repo: \textbf{(add URL here)}
+\item Environment repo: \textbf{(add URL here)}
+\begin{itemize}
+\item Vagrantfile to specify box to spawn
+\item Configuration in Puppet
+\item README with directions for running software
+\end{itemize}
+\item Unit tests included to demonstrate reproducibility
+\end{itemize}
+\end{frame}
+
+% Establish scope of problem
+%\begin{frame}
+%\frametitle{Need to lower barrier to reproducibility}
+%\begin{itemize}
+%\item Separate source code and environment
+%\item Source code: store in Git repo
+%\item Environment options:
+%\begin{itemize}
+%\item Supply separate VM (big binary file to host)
+%\item Use external service (like RunMyCode)
+%\item Dynamically spawn VM from configuration files
+%\end{itemize}
+%\item Specifying environment in text files yields maximum flexibility!
+%\end{itemize}
+%\end{frame}
 
 % Propose solution
 %\begin{frame}
