@@ -137,7 +137,7 @@ configures VMs}
 \item Either shell script or domain specific language (DSL)
 \item DSL-based files easy to read
 \item Small, can version in Git
-\item Can pull in software using Git, RubyGems, Pip, etc.
+\item Can pull in software using package managers, Git, RubyGems, Pip, etc.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -148,10 +148,11 @@ configures VMs}
 \item \url{http://www.virtualbox.org/}
 \item Supported by Oracle
 \item Cross-platform: Linux, Windows, OS X
-\item For large parallel jobs, replace Vagrant \& VirtualBox with:
+\item Hosts VM locally (like VMware)
+\item Can replace Vagrant \& VirtualBox with:
 \begin{itemize}
-\item Amazon Web Services' CloudFormation
-\item StarCluster
+\item Amazon Web Services' CloudFormation (parallel jobs)
+\item StarCluster (parallel jobs)
 \end{itemize}
 \end{itemize}
 \end{frame}
