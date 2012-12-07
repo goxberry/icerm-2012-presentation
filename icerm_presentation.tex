@@ -77,11 +77,35 @@ Energy Conversion and Storage}}
 \item Use external service (like RunMyCode)
 \item Dynamically spawn VM from configuration files
 \end{itemize}
+\item Specifying environment in text files yields maximum flexibility!
 \end{itemize}
 \end{frame}
 
 % ICERM wants a three-slide version; I'll give them three slides,
 % NOT counting the title and acknowledgments slides.
+
+%Propose solution:
+\begin{frame}
+\frametitle{Specify environment with configuration management software}
+\begin{itemize}
+\item Config management tools specify config in text
+  files
+\begin{itemize}
+\item Shell scripts (simplest, fewest prepackaged features)
+\item Puppet (\url{puppetlabs.com})
+\item Chef (\url{wiki.opscode.com})
+\end{itemize}
+\item Instantiate config using virtualization tools
+\begin{itemize}
+\item Serial, small parallel jobs: Vagrant (\url{vagrantup.com}) + VirtualBox
+  (\url{virtualbox.org})
+\item StarCluster (\url{star.mit.edu/cluster})
+\item CloudFormation (\url{aws.amazon.com/cloudformation})
+\item Any other virtualization software
+\end{itemize}
+\item Can also instantiate config on local machine, if desired
+\end{itemize}
+\end{frame}
 
 % Propose solution
 %\begin{frame}
