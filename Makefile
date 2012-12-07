@@ -6,7 +6,7 @@ TALK:=icerm_presentation
 # Literal for comma
 COMMA:= ,
 # Suffixes of output files that can be deleted upon clean
-OUT:= ,.aux ,.dvi ,.log ,.nav ,.out ,.pdf ,.snm ,.toc
+OUT:= ,.aux ,.dvi ,.log ,.nav ,.out ,.pdf ,.snm ,.toc ,.synctex.gz
 # Output files that can be deleted upon clean
 OUTPUT_FILES= $(subst $(COMMA),$(TALK),$(OUT))
 
